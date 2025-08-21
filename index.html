@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hiển thị ảnh khi click</title>
+</head>
+<body style="margin:0; text-align:center;">
 
+  <h2>Chọn ảnh để xem</h2>
+
+  <!-- Danh sách link -->
+  <a href="#" onclick="showImage('1.jpg')">Ảnh 1</a> |
+  <a href="#" onclick="showImage('Hình 1.jpg')">Ảnh 2</a> |
+  <a href="#" onclick="showImage('Hình 3.jpg')">Ảnh 3</a> |
+  <a href="#" onclick="showImage('Hình 4 (1).jpg')">Ảnh 4</a> |
+  <a href="#" onclick="showImage('Hình 4 (2).jpg')">Ảnh 5</a>
+
+  <!-- Khu vực hiển thị ảnh -->
+  <div style="margin-top:20px;">
+    <img id="viewer" src="img1.jpg" 
+         style="width:100vw; height:100vh; object-fit:contain; display:block; margin:0 auto;">
+  </div>
+
+  <script>
+    function showImage(file) {
+      document.getElementById("viewer").src = file;
+    }
+  </script>
+
+</body>
+</html>
